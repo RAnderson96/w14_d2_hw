@@ -21,12 +21,12 @@ public class Folder {
 
     @OneToMany(mappedBy = "folder")
     @Column(name = "files")
-    @JsonBackReference
+    @JsonManagedReference
     private List<File> files;
 
     @ManyToOne
     @JoinColumn(name = "person_id", nullable = true)
-    @JsonManagedReference
+    @JsonBackReference
 
     private Person person;
 

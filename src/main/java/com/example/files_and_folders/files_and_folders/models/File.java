@@ -26,7 +26,7 @@ public class File {
 
     @ManyToOne
     @JoinColumn(name = "folder_id", nullable = false)
-    @JsonManagedReference
+    @JsonBackReference
     private Folder folder;
 
     public File(String title, String extension, Integer size, Folder folder) {

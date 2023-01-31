@@ -2,6 +2,7 @@ package com.example.files_and_folders.files_and_folders.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
@@ -22,7 +23,7 @@ public class Person {
 
     @OneToMany(mappedBy = "person")
     @Column(name = "folders")
-    @JsonBackReference
+    @JsonManagedReference
 
     private List<Folder> folders;
 

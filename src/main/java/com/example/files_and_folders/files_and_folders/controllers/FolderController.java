@@ -20,7 +20,7 @@ public class FolderController {
         return new ResponseEntity<>(folderRepository.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping(value="/folders/id")
+    @GetMapping(value="/folders/{id}")
     public ResponseEntity getFolderById(@PathVariable Long id){
         return new ResponseEntity<>(folderRepository.findById(id), HttpStatus.OK);
     }

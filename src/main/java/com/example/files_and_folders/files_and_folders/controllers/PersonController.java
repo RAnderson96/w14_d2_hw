@@ -21,7 +21,7 @@ public class PersonController {
         return new ResponseEntity<>(personRepository.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping(value="/persons/id")
+    @GetMapping(value="/persons/{id}")
     public ResponseEntity getPersonById(@PathVariable Long id){
         return new ResponseEntity<>(personRepository.findById(id), HttpStatus.OK);
     }
